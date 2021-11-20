@@ -9,11 +9,42 @@ import { ProductContext } from '../context/ProductContext';
 const MainContent = () => {
     const { fetchdata } = useContext(ProductContext);
     const [users, setUsers] = useState("");
+    const [cart, setCart] = useState([]);
 
    
     
     const handleCart = (e) => {
-        console.log(e);
+        /*let data = {
+            
+            cart:e
+        }
+        try {
+            await fetch("http://localhost:2345/users/6198988096a45c8f5a1fea96", {
+                method: "PATCH",
+                body: JSON.stringify(data),
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+        }
+        catch (err) {
+            console.log(err);
+        }*/
+        
+        setCart([...cart,e])
+        axios.patch("http://localhost:2345/users/6198988096a45c8f5a1fea96",{
+                    cart:cart
+        })
+            .then((res) => {
+                console.log(res.data);
+               
+        })
+
+
+
+        
         
     }
     

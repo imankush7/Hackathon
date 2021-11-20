@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
     return (
@@ -9,6 +10,7 @@ export default function Header() {
                 <li>Our Products</li>
                 <li>About Us</li>
                 <li>Contact</li>
+                <Link to="/cart"><li>Cart</li></Link>
             </ul>
             <div className="search">
                 <i className="fa fa-search"></i>
