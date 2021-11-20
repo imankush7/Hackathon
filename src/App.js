@@ -3,13 +3,15 @@ import './App.css';
 import Header from "./components/header";
 import MainContent from "./components/mainContent";
 import Footer from "./components/footer";
+import Login from "./components/Login";
 
 function App() {
   return (
     <div className="container">
-      <Header />
+      {/* <Header />
       <MainContent />
-      <Footer />
+      <Footer /> */}
+      <Login/>
     </div>
   );
 }
